@@ -8,7 +8,7 @@ A two-player Pong game for the desktop, built with **Java** and **JavaFX**. Matc
 
 ## Features
 
-- Local two-player game on one keyboard; both players can move at the same time
+- Local two-player game on one keyboard
 - Ball speeds up after every few racket hits
 - Resizable window: the court, ball and rackets scale with it
 - Adjustable settings: player names, ball speed, racket size, winning score and speed-up factor
