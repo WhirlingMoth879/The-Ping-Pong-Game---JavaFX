@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.the_ping_pong_game.PongController">
+
+    <VBox prefWidth="80"
+          alignment="TOP_CENTER"
+          spacing="20"
+          style="-fx-background-color: red;"
+          AnchorPane.topAnchor="25.0"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0">
+        <children>
+            <Label fx:id="leftName"
+                   text="Player 1"
+                   style="-fx-font-size: 14px; -fx-text-fill: white;" />
+            <Label fx:id="leftScoreLabel"
+                   text="0"
+                   style="-fx-font-size: 36px; -fx-text-fill: white;" />
+        </children>
+    </VBox>
+
+    <VBox layoutY="0"
+          prefWidth="80"
+          alignment="TOP_CENTER"
+          spacing="20"
+          style="-fx-background-color: lightblue;"
+          AnchorPane.topAnchor="25.0"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.rightAnchor="0.0">
+        <children>
+            <Label fx:id="rightName"
+                   text="Player 2"
+                   style="-fx-font-size: 14px; -fx-text-fill: black;" />
+            <Label fx:id="rightScoreLabel"
+                   text="0"
+                   style="-fx-font-size: 36px; -fx-text-fill: black;" />
+        </children>
+    </VBox>
+
+    <MenuBar fx:id="menuBar"
+             AnchorPane.topAnchor="0.0"
+             AnchorPane.leftAnchor="0.0"
+             AnchorPane.rightAnchor="0.0">
+
+        <menus>
+
+            <Menu fx:id="gameMenu" text="Game">
+                <items>
+                    <MenuItem fx:id="restartItem" text="Restart"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem fx:id="saveFileItem" text="Save to File"/>
+                    <MenuItem fx:id="loadFileItem" text="Load from File"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem fx:id="saveDbItem" text="Save to Database"/>
+                    <MenuItem fx:id="loadDbItem" text="Load from Database"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem fx:id="exitItem" text="Exit"/>
+                </items>
+            </Menu>
+
+            <Menu fx:id="playersMenu" text="Players">
+                <items>
+                    <MenuItem fx:id="setNamesLeftItem" text="Set Left Player Name"/>
+                    <MenuItem fx:id="setNamesRightItem" text="Set Right Player Name"/>
+                </items>
+            </Menu>
+
+            <Menu fx:id="settingsMenu" text="Settings">
+                <items>
+                    <MenuItem fx:id="setSpeedItem" text="Set Ball Speed"/>
+                    <MenuItem fx:id="setRacketSizeItem" text="Set Racket Size"/>
+                    <MenuItem fx:id="setWinningScoreItem" text="Set Winning Score"/>
+                    <MenuItem fx:id="setSpeedIncreaseItem" text="Set Speed Increase"/>
+                </items>
+            </Menu>
+
+        </menus>
+    </MenuBar>
+
+</AnchorPane>
